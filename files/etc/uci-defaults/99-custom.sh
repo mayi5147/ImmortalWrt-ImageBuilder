@@ -14,8 +14,8 @@ uci add dhcp domain
 uci set "dhcp.@domain[-1].name=time.android.com"
 uci set "dhcp.@domain[-1].ip=203.107.6.88"
 
-# 编辑默认的luci显示的主机名称
-sed -i 's/ImmortalWrt/EZProV5/g' package/base-files/files/bin/config_generate
+# 设置主机名字
+#uci set system.@system[0].hostname='immortalwrt'
 
 # 检查配置文件pppoe-settings是否存在 该文件由build.sh动态生成
 SETTINGS_FILE="/etc/config/pppoe-settings"
